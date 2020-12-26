@@ -1,0 +1,32 @@
+getData([
+    {
+        "imgUr":"asset/android.jpg",
+        "title":"Android",
+        "text":"安卓是一种基于Linux内核（不包含GNU组件）的自由及开放源代码的操作系统。"
+    },
+    {
+        "imgUr":"https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1478889692,1943958954&fm=26&gp=0.jpg",
+        "title":"HTML",
+        "text":"HTML称为超文本标记语言，是一种标识性的语言。它包括一系列标签．通过这些标签可以将网络上的文档格式统一，使分散的Internet资源连接为一个逻辑整体。HTML文本是由HTML命令组成的描述性文本，HTML命令可以说明文字，图形、动画、声音、表格、链接等。"
+    },
+    {
+        "imgUr":"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1595511367581&di=3c65056d1014f320e3b401f487d9c0a1&imgtype=0&src=http%3A%2F%2Fwww.ihanshi.com%2Fuploads%2Fallimg%2F140913%2F1-1409131022303X.png",
+        "title":"CSS",
+        "text":"层叠样式表(英文全称：Cascading Style Sheets)是一种用来表现HTML（标准通用标记语言的一个应用）或XML（标准通用标记语言的一个子集）等文件样式的计算机语言。"
+    },
+    {
+        "imgUr":"https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2050318681,1081448419&fm=26&gp=0.jpg",
+        "title":"JS",
+        "text":"JavaScript（简称“JS”） 是一种具有函数优先的轻量级，解释型或即时编译型的高级编程语言。"
+    },
+    {
+        "imgUr":"https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3320720394,3499436538&fm=26&gp=0.jpg",
+        "title":"Vue",
+        "text":"VUE 是 iOS 和 Android 平台上的一款 Vlog 社区与编辑工具，允许用户通过简单的操作实现 Vlog 的拍摄、剪辑、细调、和发布，记录与分享生活。"
+    },
+    {
+        "imgUr":"https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2620459806,936426368&fm=26&gp=0.jpg",
+        "title":"Bootstrap",
+        "text":"Bootstrap是美国Twitter公司的设计师Mark Otto和Jacob Thornton合作基于HTML、CSS、JavaScript 开发的简洁、直观、强悍的前端开发框架，使得 Web 开发更加快捷。"
+    }
+])

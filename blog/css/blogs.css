@@ -1,0 +1,208 @@
+/* 大图焦点内容 */
+.focusCon{
+    width: 100%;
+    height: 800px;
+    position: relative;
+}
+.focusCon .img1{
+    position: absolute;
+    left: 100px;
+    /* margin: 30px; */
+    padding: 60px;
+    border-radius: 10px;
+    background-color: rgba(212, 213, 215, .5);
+    animation: fadein 2s linear;
+}
+@keyframes fadein{
+    0%{opacity: 0;}
+    20%{opacity: 0.2;}
+    40%{opacity: 0.4;}
+    60%{opacity: 0.6;}
+    80%{opacity: 0.8;}
+    100%{opacity: 1;}
+}
+@keyframes movein{
+    0%{left: 0px;opacity: 0;}
+    10%{left: 100;opacity: 0.1;}
+    20%{left: 200px;opacity: 0.2;}
+    30%{left: 300px;opacity: 0.3;}
+    40%{left: 400px;opacity: 0.4;}
+    50%{left: 500px;opacity: 0.5;}
+    60%{left: 600px;opacity: 0.6;}
+    70%{left: 700px;opacity: 0.7;}
+    80%{left: 800px;opacity: 0.8;}
+    90%{left: 700px;opacity: 0.9;}
+    100%{left: 600px;opacity: 1;}
+}
+
+.focusCon .img1 img{
+    height:400px;
+}
+.focusCon .text{
+    position: absolute;
+    left: 600px;
+    top: 400px;
+    width: 500px;
+    height: 300px;
+    background-color: rgba(212, 213, 215, .5);
+    /* text-align: center; */
+    font-size: 20px;
+    text-indent: 2em;
+    animation: movein 2s linear;
+}
+.focusCon .text p {
+    margin: 30px;
+}
+.focusCon .text .cutline{
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    margin:20px 0 40px 0;
+}
+.focusCon .text img{
+    display: block;
+    width: 50px ;
+    height: 50px;
+    margin: 0 auto;
+}
+/* 日历 */
+.focusCon .calender{
+    position: absolute;
+    right: 0px;
+    background-color: rgba(255, 255, 255, .3);
+    margin: 30px 30px 0px 0px;
+    width: 160px;
+    text-align: center;
+    border-radius: 5px;
+    overflow: hidden;
+    -webkit-box-reflect: below 1px linear-gradient(transparent,transparent,#004);
+    animation: calenderMoveIn 1s ease-in;
+}
+@keyframes calenderMoveIn{
+    0%{right: -50px;}
+    25%{right: -25px;}
+    50%{right: 0px;}
+    75%{right: 25px;}
+    100%{right: 0px;}
+}
+.focusCon .calender .monthName{
+    background-color: ghostwhite;
+    padding: 20px 50px;
+    border-radius: 5px 5px 0px 0px;
+    font-weight: 700;
+    font-size: 20px;
+}
+.focusCon .calender .dayName{
+    font-size: 20px;
+    font-weight: 300;
+    color: #999;
+}
+.focusCon .calender .dayNumber{
+    margin-top: 0px;
+    line-height: 1em;
+    font-size: 80px;
+    font-weight: 700;
+    color: #333;
+}
+.focusCon .calender .dayName{
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #999;
+}
+
+
+/* 主要内容 */
+.mainContent .leftCon span{
+    display: block;
+    width: 100%; 
+    text-align: center;
+    font-size: 50px;
+    font-weight: 500;
+}
+.mainContent .leftCon{
+    float: left;
+    width: 85%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 20px;
+}
+.mainContent .rightCon{
+    float: right;
+    width: 15%;
+    padding: 30px 30px 0 0;
+    
+}
+.leftCon .item{
+    /* border: 1px solid black; */
+    box-shadow:  0 0 5px 5px black;
+    transition: all .4s linear;
+    margin: 20px;
+}
+.leftCon .item:hover {
+    transform: scale(1.1);
+}
+.leftCon .item a{
+    display: block;
+    width: 250px;
+    text-decoration: none;
+    color: black;
+}
+.leftCon .item img{
+    width: 250px;
+    height: 156px;
+}
+.leftCon .item .title{
+    width: 100%;
+    text-align: center;
+}
+.leftCon .item .title label{
+    color: black;
+    font-weight: 200;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+}
+.rightCon .msgBox{
+    border-radius: 5px;
+    text-align: center;
+    background-color: rgba(212, 213, 215, .5);
+    padding: 10px;
+}
+.rightCon .msgBox img{
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin: 10px auto;
+}
+.rightCon .msgBox .cutline{
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    margin:20px 0 40px 0;
+}
+.rightCon .msgBox .address{
+    margin-top: 10px;
+    font-size: 10px;
+}
+.rightCon .msgBox .article{
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-around;
+}
+.rightCon .msgBox .callMe{
+    margin: 20px 0;   
+}
+.rightCon .msgBox .callMe a{
+    text-decoration: none;
+    color: black;
+}
+.rightCon .msgBox .callMe a:hover{
+    color: blanchedalmond;
+}
+.rightCon .msgBox .callMe img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}

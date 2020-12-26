@@ -1,0 +1,179 @@
+.con{
+    width: 60%;
+    height: 600px;
+    min-width: 550px;
+    margin: 10px auto;
+    background: rgba(246, 245, 243,0.5);
+}
+/* 头部盒子 */
+.con .header{
+    width: 100%;
+    height: 70px;
+    line-height: 70px;
+    background-color: black;
+}
+/* logo */
+.con .header .playerLogo{
+    float: left;
+}
+.con .playerLogo span{
+    margin-left: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: "楷体";
+    color: white;
+}
+
+/* 右侧输入框 */
+.con .searchInput{
+    float: right;
+}
+.con .searchInput input{
+    outline: none;
+    text-indent: 1em;
+    margin-right: 20px;
+    height: 25px;
+    width: 190px;
+    border: none;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+/* 内容区域 */
+.con .mainCon{
+    display: flex;
+    width: 100%;
+    height: 80%;
+    /* background: rgba(246, 245, 243,0.5); */
+}
+.con .mainCon .musicList{
+    width: 25%;
+    background: rgba(253, 251, 251, 0);
+    overflow-y: auto;
+    /* background-color: gainsboro; */
+}
+
+/* 歌曲列表 */
+.con .musicUl{
+    list-style: none;
+    padding-left: 0px;
+    
+}
+::-webkit-scrollbar{
+    display: none;
+}
+.con .musicUl li{
+    overflow-x: hidden;
+    /* display: flex; */
+    height: 25px;
+    /* cursor: pointer; */
+    font-size: 10px;
+    margin-bottom: 5px;
+}
+.con .musicUl li:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+/* 列表中音乐播放按钮 */
+.con .play{
+    /* float: left; */
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+    background: rgba(255, 255, 255, 0);
+    border: none;
+    /* background-image: url(../asset/playicon.jpg); */
+    background-position:center;
+}
+.con .play img{
+    width: 15px;
+    height: 15px;
+}
+/* 歌曲列表中的歌名 */
+.con .musicName{
+    /* display: block; */
+    /* max-width: 100px; */
+    margin-left: 5px;
+    line-height: 20px;
+}
+/* mv播放按钮 */
+.con .mvPlay{
+    cursor: pointer;
+    float: right;
+    width: 15px;
+    height: 15px;
+    border: none;
+    background: rgba(255, 255, 255, 0);
+    /* background-image: url(images\playicon.jpg); */
+    /* background-image: url(../images/mvPlay.jpg); */
+}
+/* 中间动画 以及专辑图片 */
+.con .mainCon .anmilate{
+    /* float: left; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    border-left: rgba(44, 42, 40, 0.863) 3px solid;
+    background: rgba(255, 255, 255, 0);
+}
+.con .outer{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 100px;
+    background: linear-gradient(black,white,black);
+}
+.con .inner{
+    position: absolute;
+    left: 35px;
+    top: 35px;
+    width: 80px;
+    height: 80px;
+    border-radius: 100px;
+    background-color: white;
+    overflow: hidden;
+}
+.con .inner img{
+    width: 80px;
+    height: 80px;
+}
+/* 动画类名 */
+.con .action{
+    animation: rotate 2s infinite;
+    animation-timing-function: linear;
+}
+@keyframes rotate{
+    from{transform: rotate(0deg);}
+    to{transform: rotate(360deg);}
+}
+/* 右侧留言显示区域 */
+.con .mainCon .text{
+    /* float: right; */
+    overflow-y: auto;
+    width: 25%;
+    border-left: rgba(44, 42, 40, 0.863) 3px solid;
+    background: rgba(255, 255, 255, 0);
+}
+.con .text img{
+    width: 25px;
+    height: 25px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+.con .leaveWord span{
+    font-size: 13px;
+    line-height: 5px;
+}
+.con .leaveWord p{
+    font-size: 10px;
+    text-indent: 2em;
+}
+.con .footer{
+    width: 100%;
+    height: 50px;  
+    background: rgba(246, 245, 243,0.9);
+}
+.con .footer audio{
+    width: 100%;
+    height: 100%;
+}

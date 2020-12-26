@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/blogs.css">
+    <link rel="stylesheet" href="css/headNav.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/Jquery.min.js"></script>
+    <script src="js/myBlog.js"></script>
+    <script src="js/scrollReveal.js"></script>
+    <script src="js/template-web.js"></script>
+    <script src="js/blogs.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- 头部导航栏 -->
+        <div class="header">
+            <!-- 左侧logo -->
+            <div class="logo">
+            </div>
+            <!-- 中间导航部分 -->
+            <div class="nav hidden-md hidden-sm hidden-xs">
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="blogs.html">博客</a></li>
+                    <li><a href="studyProcess.html">学习历程</a></li>
+                    <li><a href="todolist.html">记事簿</a></li>
+                    <li><a href="musicPlayer.html">Music</a></li>
+                </ul>
+            </div>
+            <!-- 右侧搜索框 -->
+            <div class="searchBox">
+                <input type="text">
+                <img class="searchImg" src="asset/search.png" alt="">
+                <label for="" class="underline"></label>
+            </div>
+            <div class="dropDownButton hidden-lg" onclick="showReactNav()"></div>
+        </div>
+        <!-- 响应式导航栏 -->
+        <div class="reactNav hidden-lg">
+            <div class="navbox">
+                <span class="msg">
+                    <img src="asset/head.png" alt="">
+                    <label for="">色彩控灬杰少</label>
+                    <label for="">1430702430@qq.com</label>
+                    <div class="cutline"></div>
+                </span>
+                <span class="navtxt"><a href="index.html">首页</a></span>
+                <span class="navtxt"><a href="blogs.html">博客</a></span>
+                <span class="navtxt"><a href="studyProcess.html">学习历程</a></span>
+                <span class="navtxt"><a href="todolist.html">记事簿</a></span>
+                <span class="navtxt"><a href="musicPlayer.html">Music</a></span>
+                <span class="navtxt"><img src="asset/dropUp.png" onclick="hideReactNav()" alt=""></span>
+            </div>
+        </div>
+        <div class="focusCon">
+            <div class="img1">
+                <img src="asset/vue.jpg" alt="">
+            </div>
+            <div class="text">
+                <p>Vue 是一套用于构建用户界面的渐进式JavaScript框架。与其它大型框架不同的是，Vue 被设计为可以自底向上逐层应用。Vue 的核心库只关注视图层，方便与第三方库或既有项目整合。</p>
+                <div class="cutline"></div>
+                <img src="asset/vueIcon.png" alt="">
+            </div>
+            <!-- 日历 -->
+            <div class="calender">
+                <p class="monthName"></p>
+                <p class="dayName"></p>
+                <p class="dayNumber"></p>
+                <p class="year"></p>
+            </div>
+        </div>
+        <div class="mainContent">
+            <div class="leftCon" id="leftCon">
+                <span>LIST</span>
+            </div>
+            <div class="rightCon">
+                <div class="msgBox" data-scroll-reveal="enter top over 3s after 0.5s">
+                    <img src="asset/head.png" alt="">
+                    <div class="cutline"></div>
+                    <div class="name">色彩控灬west</div>
+                    <div class="address">1430702430@qq.com</div>
+                    <div class="article">
+                        <p>原创</p>
+                        <i>|</i>
+                        <p>转载</p>
+                    </div>
+                    <div class="callMe">
+                        <a href="#">
+                            <img src="asset/callMe.jpg" alt="">
+                            联系我
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div style="clear: both;"></div>
+            <div>感觉自己萌萌哒</div>
+        </div>
+    </div>
+
+    <!-- 模板引擎art-template所需模板 -->
+    <script id="mytemplate" type="text/html">
+        {{each}}
+            <div class="item" data-scroll-reveal="enter from top and move 40px over 2s ">
+                <a href="detail.html">                
+                    <img src="{{$value.imgUr}}" alt="">
+                    <div class="title">
+                        <h2>{{$value.title}}</h2>
+                        <label for="">{{$value.text}}</label>
+                    </div>               
+                </a>
+            </div>
+        {{/each}}
+    </script>
+
+    <script>
+        window.onload = function () {
+            // 载入动画启动
+            window.scrollReveal = new scrollReveal();
+        }
+    </script>
+    <script>
+        // jquery入口函数
+        $(function () {
+            // 日历数据获取以及绑定
+            const lang = navigator.language;
+            let date = new Date();
+
+            let dayNumber = date.getDate();
+            let month = date.getMonth();
+            let dayName = date.toLocaleString(lang, { weekday: 'long' });
+            let monthName = date.toLocaleString(lang, { month: 'long' });
+            let year = date.getFullYear();
+
+            $(".calender .monthName").html(monthName);
+            $(".calender .dayName").html(dayName);
+            $(".calender .dayNumber").html(dayNumber);
+            $(".calender .year").html(year);
+
+
+        })
+    </script>
+
+    <!-- jsonp方法 将数据动态渲染到页面 -->
+    <script>
+        function getData(data){
+            console.log(data);
+            // data = JSON.parse(data);
+            $('.leftCon').append(template('mytemplate',data));
+        }
+    </script>
+<!-- 使用jsonp 解决跨域问题 -->
+<script type="text/javascript" src="itemData.json?callback=getData"></script>
+</body>
+
+</html>

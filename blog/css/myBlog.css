@@ -1,0 +1,49 @@
+/* 这里开始内容区域的编辑 */
+.con{
+    width: 100%;
+    
+}
+.con section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 300px;
+    margin: 200px auto;
+}
+.con section p{
+    font-size: 80px;
+    font-weight: 700;
+    animation:flash 3s ease-in-out infinite;
+}
+.con section label{
+    font-size: 24px;
+    font-family: "kaiti";
+    animation:flash 3s ease-in-out infinite;
+}
+@keyframes flash{
+    0%{text-shadow: 
+        0 0 10px rgb(171, 180, 88),
+        0 0 20px rgb(178, 196, 19),
+        0 0 40px rgb(233, 229, 13),
+        0 0 80px rgb(211, 159, 16),
+        0 0 120px rgb(253,181,43);}
+    50%{text-shadow: none;}
+    100%{text-shadow: 
+        0 0 10px rgb(171, 180, 88),
+        0 0 20px rgb(178, 196, 19),
+        0 0 40px rgb(233, 229, 13),
+        0 0 80px rgb(211, 159, 16),
+        0 0 120px rgb(253,181,43);}
+}
+.footer img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.footer a{
+    display: block;
+    color: white;
+    text-decoration: none;
+}
+

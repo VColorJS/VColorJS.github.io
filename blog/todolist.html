@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>记事本</title>
+    <link rel="stylesheet" href="css/todolist.css">
+    <!-- 导入响应式css样式文件 -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/headNav.css">
+    <script src="js/myBlog.js"></script>
+    <script src="js/Jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!-- <script src="js/todolist.js"></script> -->
+</head>
+
+<body>
+    <div class="container" id="myApp">
+        <!-- 头部导航栏 -->
+        <div class="header">
+            <!-- 左侧logo -->
+            <div class="logo">
+            </div>
+            <!-- 中间导航部分 -->
+            <div class="nav hidden-md hidden-sm hidden-xs">
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="blogs.html">博客</a></li>
+                    <li><a href="studyProcess.html">学习历程</a></li>
+                    <li><a href="todolist.html">记事簿</a></li>
+                    <li><a href="musicPlayer.html">Music</a></li>
+                </ul>
+            </div>
+            <!-- 右侧搜索框 -->
+            <div class="searchBox">
+                <input type="text">
+                <img class="searchImg" src="asset/search.png" alt="">
+                <label for="" class="underline"></label>
+            </div>
+            <div class="dropDownButton hidden-lg" onclick="showReactNav()"></div>
+        </div>
+        <!-- 响应式导航栏 -->
+        <div class="reactNav hidden-lg">
+            <div class="navbox">
+                <span class="msg">
+                    <img src="asset/head.png" alt="">
+                    <label for="">色彩控灬杰少</label>
+                    <label for="">1430702430@qq.com</label>
+                    <div class="cutline"></div>
+                </span>
+                <span class="navtxt"><a href="index.html">首页</a></span>
+                <span class="navtxt"><a href="blogs.html">博客</a></span>
+                <span class="navtxt"><a href="studyProcess.html">学习历程</a></span>
+                <span class="navtxt"><a href="todolist.html">记事簿</a></span>
+                <span class="navtxt"><a href="musicPlayer.html">Music</a></span>
+                <span class="navtxt"><img src="asset/dropUp.png" onclick="hideReactNav()" alt=""></span>
+            </div>
+        </div>
+
+        <div class="todolist">
+            <!-- 头部输入部分 -->
+            <div class="head">
+                <div class="title">ToDoList</div>
+                <div class="searchbox">
+                    <input type="text" placeholder="添加事务" v-model="thing" @keyup.enter="addThings">
+                </div>
+            </div>
+            <div class="thingsCon">
+                <div class="doList">
+                    <div class="headtxt">
+                        <h2>正在进行</h2>
+                    </div>
+                    <div class="list clearF">
+                        <ul>
+                            <li v-for="(item,index) in list"  v-if="!item.checked">
+                                <input type="checkbox" name="" id="" v-model="item.checked">
+                                <p>{{item.title}}</p>
+                                <a href="#" @click=move(index)>×</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="doneList">
+                    <div class="headtxt">
+                        <h2>已经完成</h2>
+                    </div>
+                    <div class="list clearF">
+                        <ol>
+                            <li v-for="(item,index) in list"  v-if="item.checked">
+                                <input type="checkbox" name="" id="" v-model="item.checked">
+                                <p>{{item.title}}</p>
+                                <a href="#" @click=move(index)>×</a>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var todolist = new Vue({
+            el: "#myApp",
+            data: {
+                thing: "",
+                list:[
+                    {title:"洗菜",checked:true},
+                    {title:"做饭",checked:true},
+                    {title:"吃饭",checked:false},
+                    {title:"刷锅洗碗",checked:false},
+                ]
+            },
+            methods: {
+                addThings: function (data) {
+                    console.log(this.list[1].title);
+                    this.list.push({
+                        title:this.thing,
+                        checked:false
+                    });
+                    this.thing="";
+                },
+                move:function(index){
+                    this.list.splice(index,1);
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>detail</title>
+    <!-- 引入头部公用样式文件 -->
+    <link rel="stylesheet" href="css/headNav.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- 引入详情页样式文件 -->
+    <link rel="stylesheet" href="css/detail.css">
+    <script src="js/myBlog.js"></script>
+    <script src="js/Jquery.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- 头部导航栏 -->
+        <div class="header">
+            <!-- 左侧logo -->
+            <div class="logo">
+            </div>
+            <!-- 中间导航部分 -->
+            <div class="nav hidden-md hidden-sm hidden-xs">
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="blogs.html">博客</a></li>
+                    <li><a href="studyProcess.html">学习历程</a></li>
+                    <li><a href="todolist.html">记事簿</a></li>
+                    <li><a href="musciPlayer.html">Music</a></li>
+                </ul>
+            </div>
+            <!-- 右侧搜索框 -->
+            <div class="searchBox">
+                <input type="text">
+                <img class="searchImg" src="asset/search.png" alt="">
+                <label for="" class="underline"></label>
+            </div>
+            <div class="dropDownButton hidden-lg" onclick="showReactNav()"></div>
+        </div>
+        <!-- 响应式导航栏 -->
+        <div class="reactNav hidden-lg">
+            <div class="navbox">
+                <span class="msg">
+                    <img src="asset/head.png" alt="">
+                    <label for="">色彩控灬杰少</label>
+                    <label for="">1430702430@qq.com</label>
+                    <div class="cutline"></div>
+                </span>  
+                <span class="navtxt"><a href="index.html">首页</a></span>
+                <span class="navtxt"><a href="blogs.html">博客</a></span>
+                <span class="navtxt"><a href="studyProcess.html">学习历程</a></span>
+                <span class="navtxt"><a href="todolist.html">记事簿</a></span>
+                <span class="navtxt"><a href="musicPlayer.html">Music</a></span>
+                <span class="navtxt"><img src="asset/dropUp.png" onclick="hideReactNav()" alt=""></span>
+            </div>
+        </div>
+
+        <!-- 详情页主体部分开始 -->
+        <div class="detailCon">
+            <div class="title">
+                <h2>Android</h2>
+            </div>
+            <div class="focusImg">
+                <img src="asset/android.jpg" alt="">
+            </div>
+            <section class="studyTool">
+                <h2>学习中使用的工具</h2>
+                <div class="toolCon">
+                    <img src="#" alt="">
+                    <p>Eclipes for Android</p>
+                </div>   
+            </section>
+            <section class="introduce">
+                <h2>简介</h2>
+                    <p>安卓是一种基于Linux内核（不包含GNU组件）的自由及开放源代码的操作系统。主要使用于移动设备，如智能手机和平板电脑，由美国Google公司和开放手机联盟领导及开发。Android操作系统最初由Andy Rubin开发，主要支持手机。2005年8月由Google收购注资。2007年11月，Google与84家硬件制造商、软件开发商及电信营运商组建开放手机联盟共同研发改良Android系统。随后Google以Apache开源许可证的授权方式，发布了Android的源代码。第一部Android智能手机发布于2008年10月。Android逐渐扩展到平板电脑及其他领域上，如电视、数码相机、游戏机、智能手表等。2011年第一季度，Android在全球的市场份额首次超过塞班系统，跃居全球第一。 2013年的第四季度，Android平台手机的全球市场份额已经达到78.1%。2013年09月24日谷歌开发的操作系统Android在迎来了5岁生日，全世界采用这款系统的设备数量已经达到10亿台。</p> 
+            </section>
+            <section class="technology">
+                <h2>技术概要</h2> 
+                <div class="con">
+                    <h4>布局</h4>
+                    <p>RelativeLayout 相对布局 通过layout_toRightOf,layout_toLeftOf,layout_below,layout_above 分别定位于选定元素的右左下上。</p>
+                    <p>LinaerLayout 线性布局 可通过orientation属性来控制线性主轴方向</p>
+                </div>
+                <div class="con">
+                    <h4>控件</h4>
+                    <p>Button 按钮,TextView 不可编辑的文本框,EditText 可编辑的文本框,ImgView 图片,ImgIcon 图片按钮</p>
+                </div>
+            </section>
+            <section class="studyTool">
+                <h2>自己的小工程</h2>
+                <img src="asset/myProjectLogin.png" alt="" class="myProject">
+                <img src="asset/myProjectMenu.png" alt="" class="myProject">
+                <p>该工程由登录、注册、菜单主页、筛选界面、后台数据库操作完成。</p>
+            </section>
+        </div>
+        <!-- 详情页主体部分结束 -->
+    </div>
+</body>
+</html>

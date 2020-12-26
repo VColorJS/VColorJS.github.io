@@ -1,0 +1,19 @@
+.detailCon{
+    width: 80%;
+    margin: 0 auto;
+    height: 20px;
+}
+.detailCon section{
+    margin: 10px 0px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, .2);
+    padding: 10px;
+}
+.detailCon section p{
+    text-indent: 2em;
+}
+section img{
+    width: 100px;
+    height: 170px;
+    margin: 10px;
+}

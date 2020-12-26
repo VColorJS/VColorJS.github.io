@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/myBlog.css">
+    <!-- 导入响应式css样式文件 -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/headNav.css">
+    <script src="js/myBlog.js"></script>
+    <script src="js/Jquery.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- 头部导航栏 -->
+        <div class="header">
+            <!-- 左侧logo -->
+            <div class="logo">
+            </div>
+            <!-- 中间导航部分 -->
+            <div class="nav hidden-md hidden-sm hidden-xs">
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="blogs.html">博客</a></li>
+                    <li><a href="studyProcess.html">学习历程</a></li>
+                    <li><a href="todolist.html">记事簿</a></li>
+                    <li><a href="musicPlayer.html">Music</a></li>
+                </ul>
+            </div>
+            <!-- 右侧搜索框 -->
+            <div class="searchBox">
+                <input type="text">
+                <img class="searchImg" src="asset/search.png" alt="">
+                <label for="" class="underline"></label>
+            </div>
+            <div class="dropDownButton hidden-lg" onclick="showReactNav()"></div>
+        </div>
+        <!-- 响应式导航栏 -->
+        <div class="reactNav hidden-lg">
+            <div class="navbox">
+                <span class="msg">
+                    <img src="asset/head.png" alt="">
+                    <label for="">色彩控灬杰少</label>
+                    <label for="">1430702430@qq.com</label>
+                    <div class="cutline"></div>
+                </span>  
+                <span class="navtxt"><a href="index.html">首页</a></span>
+                <span class="navtxt"><a href="blogs.html">博客</a></span>
+                <span class="navtxt"><a href="studyProcess.html">学习历程</a></span>
+                <span class="navtxt"><a href="todolist.html">记事簿</a></span>
+                <span class="navtxt"><a href="musicPlayer.html">Music</a></span>
+                <span class="navtxt"><img src="asset/dropUp.png" onclick="hideReactNav()" alt=""></span>
+            </div>
+        </div>
+        <!-- 内容区域 -->
+        <div class="con">
+            <section>
+                <p>Study</p>
+                <label>登峰造极境</label>
+            </section>
+        </div>
+        <!-- 底部 -->
+        <div class="footer">
+            <a href="#">
+                <img class="img-callme" src="asset/callMe.jpg" alt=""> 联系我
+            </a>
+        </div>
+    </div>
+</body>
+</html>
